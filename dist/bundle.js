@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("hola")})();
+(()=>{"use strict";console.log("hola");class e extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){this.render()}render(){this.shadowRoot.innerHTML=""}}customElements.define("app-container",e)})();
