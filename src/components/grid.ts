@@ -1,6 +1,4 @@
-console.log("hola");
-
-class App extends HTMLElement {
+class Grid extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: "open" });
@@ -14,4 +12,4 @@ class App extends HTMLElement {
       }
 }
 
-customElements.define("app-container", App);
+customElements.define("grid-container", Grid);
