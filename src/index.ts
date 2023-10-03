@@ -1,5 +1,5 @@
 console.log("hola");
-
+import * as components from "./components/exports"
 class App extends HTMLElement {
     constructor() {
         super()
@@ -10,7 +10,7 @@ class App extends HTMLElement {
       }
 
       render() {
-        this.shadowRoot!.innerHTML = ''
+        this.shadowRoot!.innerHTML = '<grid-container></grid-container> '
       }
 }
 
