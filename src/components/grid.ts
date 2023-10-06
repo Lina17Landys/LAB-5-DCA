@@ -1,5 +1,3 @@
-import { gridsData } from '../data';
-
 class Grids extends HTMLElement {
     constructor() {
         super();
@@ -7,31 +5,12 @@ class Grids extends HTMLElement {
     }
 
     connectedCallback() {
-        this.fetchAndRenderData();
+        this.render();
     }
-
-    async fetchAndRenderData() {
-        try {
-            let html = '<table border="1">';
-
-            gridsData.forEach((gridData) => {
-                html += `<tr><th colspan="15">${gridData.title}</th></tr>`;
-                gridData.grid.forEach((row) => {
-                    html += '<tr>';
-                    row.forEach((cell:any) => {
-                        html += `<td>${cell ? 'X' : ''}</td>`;
-                    });
-                    html += '</tr>';
-                });
-            });
-
-            html += '</table>';
-
-            this.shadowRoot!.innerHTML = html;
-        } catch (error) {
-            console.error("Error al obtener los datos:", error);
-        }
-    }
+render() {
+    this.innerHTML = ''
+}
+   
 }
 
 customElements.define("grid-container", Grids);
