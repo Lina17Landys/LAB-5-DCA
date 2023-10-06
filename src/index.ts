@@ -1,15 +1,15 @@
 import "./components/grid";
 
-let color: HTMLInputElement | null = document.getElementById("colorPicker") as HTMLInputElement;
+document.addEventListener("DOMContentLoaded", function () {
+  const pixelGrids = document.querySelectorAll("pixel-grid");
 
-const gridContainer: HTMLElement | null = document.getElementById("gridContainer");
-
-const pixelGrid: any = document.querySelector("pixel-grid");
-pixelGrid.color = color ? color.value : "";
-gridContainer?.addEventListener("click", function (e) {
-  if (e.target instanceof HTMLTableCellElement) {
-    e.target.style.backgroundColor = color ? color.value : "";
-  }
+  pixelGrids.forEach((grid) => {
+    grid.addEventListener("click", (e) => {
+      if (e.target instanceof HTMLTableCellElement) {
+        e.target.style.backgroundColor = "purple";
+      }
+    });
+  });
 });
 
-pixelGrid.createGrid();
+
