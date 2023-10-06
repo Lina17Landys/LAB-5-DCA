@@ -1,4 +1,5 @@
 import "./components/grid";
+let currentColor = "purple"; 
 
 document.addEventListener("DOMContentLoaded", function () {
   const pixelGrids = document.querySelectorAll("pixel-grid");
@@ -6,10 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
   pixelGrids.forEach((grid) => {
     grid.addEventListener("click", (e) => {
       if (e.target instanceof HTMLTableCellElement) {
-        e.target.style.backgroundColor = "purple";
+        currentColor = "purple"; 
+        pixelGrids.forEach((grid) => {
+          grid.shadowRoot!.querySelectorAll("td").forEach((column) => {
+            column.style.backgroundColor = currentColor;
+          });
+        });
       }
     });
   });
 });
+
 
 

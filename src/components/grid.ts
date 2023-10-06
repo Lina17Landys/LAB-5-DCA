@@ -1,4 +1,5 @@
 class Grid extends HTMLElement {
+  private currentColor: string = "purple";
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -21,7 +22,7 @@ class Grid extends HTMLElement {
         row.appendChild(column);
 
         column.addEventListener("click", () => {
-          column.style.backgroundColor = "purple";
+          column.style.backgroundColor = this.currentColor;
         });
       }
       table.appendChild(row);
