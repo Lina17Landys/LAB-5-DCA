@@ -18,58 +18,16 @@ body {
   h2:first-of-type {
     margin-top: 0.5em;
   }
-  
-  .container {
-    margin: 10px auto;
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #f1f1f1;
-    box-shadow: 3px 3px 3px 0px #f1f1f1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #sizePicker {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-  }
-  
-  #sizePicker label {
-    margin: 5px 10px 5px 0;
-    font-weight: 400;
-  }
-  
-  #sizePicker input {
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    padding: 10px;
-    border: 1px solid #666;
-    font: inherit;
-  }
-  
+
+ #colorPicker {
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
   input[type="number"] {
     width: 6em;
   }
   
-  #sizePicker button {
-    padding: 10px 20px;
-    background-color: #666;
-    border: 1px solid #ddd;
-    color: white;
-    font: inherit;
-    font-weight: 400;
-  }
-  
-  #sizePicker button:hover {
-    background-color: #ccc;
-  }
-  
-  table,
-  tr,
-  td {
+  table, tr, td {
     border: 1px solid black;
   }
   
@@ -85,14 +43,4 @@ body {
   td {
     width: 20px;
   }
-  
-  @media (max-width: 800px) {
-    #sizePicker input {
-      margin: 10px 0;
-    }
-  
-    #sizePicker {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  }
+ 
